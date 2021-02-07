@@ -1,0 +1,14 @@
+/dts-v1/;
+
+/ {
+  my_node: node@0 {
+    compatible = "my_node";
+    status = "disabled";
+
+    my_child: child@0 {
+      compatible = "my_child";
+      value = <0xf>;
+    };
+  };
+};
+

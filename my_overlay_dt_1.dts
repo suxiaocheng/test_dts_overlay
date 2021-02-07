@@ -1,0 +1,11 @@
+/dts-v1/;
+/plugin/;
+
+&my_node {
+  status = "fail";
+};
+
+&my_child {
+  value = <0x2>;
+};
+

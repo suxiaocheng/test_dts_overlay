@@ -1,0 +1,38 @@
+/dts-v1/;
+/plugin/; 
+
+/{
+	ft8006s_hd720_dsi_vdo {
+		status = "okay";
+		
+		lcm_params-resolution = <720 1600>;
+		
+		lcm_params-dbi-te_mode = <0>;
+		
+		lcm_params-dsi-mode = <1>;
+		lcm_params-dsi-lane_num = <4>;
+		lcm_params-dsi-data_format = <0>;
+		lcm_params-dsi-data_sequence = <2>;
+		lcm_params-dsi-packet_size = <256>;
+		lcm_params-dsi-intermediat_buffer_num = <2>;
+		
+		lcm_params-dsi-ps = <2>;
+		lcm_params-dsi-lcm_ext_te_enable = <0>;
+		lcm_params-dsi-vertical_sync_active = <8>;
+		lcm_params-dsi-vertical_backporch = <106>;
+		lcm_params-dsi-vertical_frontporch = <130>;
+		lcm_params-dsi-vertical_active_line = <1600>;
+		lcm_params-dsi-horizontal_sync_active = <14>;
+		lcm_params-dsi-horizontal_backporch = <24>;
+		lcm_params-dsi-horizontal_frontporch = <28>;
+		lcm_params-dsi-horizontal_active_line = <720>;
+		
+		lcm_params-dsi-pll_clock = <277>;
+		lcm_params-dsi-ssc_disable = <1>;
+	};
+};
+
+&lcm_module_list {
+	lcm-names = "ft8006s_hd720_dsi_vdo";
+    lcm-0 = <&ft8006s_hd720_dsi_vdo>;
+};
