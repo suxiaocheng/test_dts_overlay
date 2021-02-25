@@ -151,6 +151,8 @@ int main(int argc, char **argv)
 		int len = 0;
 		const char *data = NULL;
 		int value;
+		unsigned int resolution[2];
+
 		offset = fdt_node_offset_by_compatible(merged_fdt, -1, "my_node");
 		printf("offset is: %d\n", offset);
 		data = fdt_getprop(merged_fdt, offset, "status", &len);
@@ -167,6 +169,15 @@ int main(int argc, char **argv)
 			printf("value = %x\n", value);
 		} else {
 			printf("value not found\n");
+		}
+
+		offset = fdt_node_offset_by_compatible(merged_fdt, -1, "lcd_0");
+		printf("offset is: %d\n", offset);
+		disp_fdt_getprop_u32_array(merged_fdt, offset, "lcm_params-resolution", resolution);
+		if (len > 0) {
+			printf("resolution = %x x %x\n", resolution[0], resolution[1]);
+		} else {
+			printf("resolution not found\n");
 		}
 	}
 

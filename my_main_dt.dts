@@ -10,5 +10,38 @@
       value = <0xf>;
     };
   };
+  lcm_module_list: node@1 {
+  };
+
+  lcd_0:lcd_0 {
+    status = "okay";
+  };
+  lcd_1:lcd_1 {
+    status = "disabled";
+  };
+  lcd_2:lcd_2 {
+    status = "disabled";
+  };
+  lcd_3:lcd_3 {
+    status = "disabled";
+  };
+  lcd_4:lcd_4 {
+    status = "disabled";
+  };
+  lcd_5:lcd_5 {
+    status = "disabled";
+  };
+  lcd_6:lcd_6 {
+    status = "disabled";
+  };
+  lcd_7:lcd_7 {
+    status = "disabled";
+  };
+  lcd_8:lcd_8 {
+    status = "disabled";
+  };
+  lcd_9:lcd_9 {
+    status = "disabled";
+  };
 };
 
